@@ -1,0 +1,48 @@
+<div class="login-container">
+  <div class="login-inner">
+    <!-- Left: form -->
+    <div class="form-side">
+      <p-card class="form-card">
+        <div class="form-content">
+          <div class="logo">Opra</div>
+          <h2 class="title">Welcome back</h2>
+          <p class="subtitle">Sign in to your account</p>
+
+          <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <div class="field input-with-icon">
+              <i class="pi pi-envelope icon"></i>
+              <input id="username" pInputText formControlName="username" placeholder="Email" />
+            </div>
+
+            <div class="field input-with-icon p-2">
+              <i class="pi pi-lock icon"></i>
+              <input type="password" id="password" pInputText formControlName="password" placeholder="Password" />
+            </div>
+
+            <div class="forgot-row">
+              <a class="forgot-link" href="#">Forgot password?</a>
+            </div>
+
+            <div class="field actions p-2">
+              <button pButton type="submit" label="Login" class="p-button-rounded p-button-primary"></button>
+            </div>
+          </form>
+
+          <div class="signup-note p-2 m-2 text-black">
+            Don't have an account? <a href="#">Signup now</a>
+          </div>
+        </div>
+      </p-card>
+    </div>
+
+    <!-- Right: image + overlay -->
+    <div class="image-side" aria-hidden="true">
+      <div class="image-overlay">
+        <div class="overlay-text">
+          <h3>Every new friend is a new adventure.</h3>
+          <p>Let's get connected.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

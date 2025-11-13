@@ -1,0 +1,17 @@
+<div class="dashboard-container">
+  <div class="dashboard-topbar">
+    <div class="topbar-wrapper">
+      <p-menubar [model]="menuItems"></p-menubar>
+      <div class="user-menu">
+        <button class="user-button" (click)="menu.toggle($event)">
+          <i class="pi pi-fw pi-user"></i>
+        </button>
+        <p-menu #menu [model]="userMenuItems" [popup]="true"></p-menu>
+      </div>
+      <button class="p-1" (click)="onLogout()">Log Out</button>
+    </div>
+  </div>
+  <div class="dashboard-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

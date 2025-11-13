@@ -1,0 +1,40 @@
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  ::ng-deep {
+    p-table {
+      flex: 1;
+      
+      .p-datatable {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .p-datatable-wrapper {
+        flex: 1;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  &.status-active {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+
+  &.status-inactive {
+    background-color: #fee2e2;
+    color: #7f1d1d;
+  }
+}

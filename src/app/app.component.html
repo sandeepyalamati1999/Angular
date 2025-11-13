@@ -1,0 +1,30 @@
+<main class="app-main">
+  <!-- Routes render here; login is the default route -->
+  <router-outlet></router-outlet>
+</main>
+
+<style>
+  .app-header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    background: linear-gradient(90deg, #0ea5e9, #7c3aed);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .brand {
+    font-size: 1.125rem;
+  }
+
+  .app-main {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+    padding: 1.25rem;
+  }
+</style>
